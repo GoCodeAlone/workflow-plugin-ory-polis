@@ -1,0 +1,211 @@
+{
+  "version": "1",
+  "contracts": [
+    {
+      "kind": "module",
+      "type": "ory.polis",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.ProviderConfig"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_auth_provider_describe",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.AuthProviderDescribeConfig",
+      "input": "workflow.plugins.ory_polis.v1.AuthProviderDescribeInput",
+      "output": "workflow.plugins.ory_polis.v1.AuthProviderDescribeOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_connection_create",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_connection_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_connection_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_connection_update",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_connection_delete",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_create",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_update",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_delete",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_event_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_user_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_user_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_group_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_group_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_group_member_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_setup_link_create",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_setup_link_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_sso_setup_link_delete",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_setup_link_create",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_setup_link_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_directory_setup_link_delete",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_identity_federation_get",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    },
+    {
+      "kind": "step",
+      "type": "step.ory_polis_identity_federation_sso_list",
+      "mode": "strict",
+      "config": "workflow.plugins.ory_polis.v1.OryPolisStepConfig",
+      "input": "workflow.plugins.ory_polis.v1.OryPolisStepInput",
+      "output": "workflow.plugins.ory_polis.v1.OryPolisStepOutput"
+    }
+  ]
+}

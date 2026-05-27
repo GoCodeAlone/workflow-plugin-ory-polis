@@ -1,0 +1,68 @@
+{
+  "name": "workflow-plugin-ory-polis",
+  "version": "0.1.0",
+  "description": "Ory Polis enterprise SSO and Directory Sync provider plugin",
+  "author": "GoCodeAlone",
+  "license": "MIT",
+  "type": "external",
+  "tier": "community",
+  "private": false,
+  "minEngineVersion": "0.64.0",
+  "keywords": ["ory", "polis", "sso", "saml", "oidc", "scim", "directory-sync"],
+  "homepage": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis",
+  "repository": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis",
+  "capabilities": {
+    "configProvider": false,
+    "moduleTypes": ["ory.polis"],
+    "stepTypes": [
+      "step.ory_polis_auth_provider_describe",
+      "step.ory_polis_sso_connection_create",
+      "step.ory_polis_sso_connection_get",
+      "step.ory_polis_sso_connection_list",
+      "step.ory_polis_sso_connection_update",
+      "step.ory_polis_sso_connection_delete",
+      "step.ory_polis_directory_create",
+      "step.ory_polis_directory_get",
+      "step.ory_polis_directory_list",
+      "step.ory_polis_directory_update",
+      "step.ory_polis_directory_delete",
+      "step.ory_polis_directory_event_list",
+      "step.ory_polis_directory_user_list",
+      "step.ory_polis_directory_user_get",
+      "step.ory_polis_directory_group_list",
+      "step.ory_polis_directory_group_get",
+      "step.ory_polis_directory_group_member_list",
+      "step.ory_polis_sso_setup_link_create",
+      "step.ory_polis_sso_setup_link_get",
+      "step.ory_polis_sso_setup_link_delete",
+      "step.ory_polis_directory_setup_link_create",
+      "step.ory_polis_directory_setup_link_get",
+      "step.ory_polis_directory_setup_link_delete",
+      "step.ory_polis_identity_federation_get",
+      "step.ory_polis_identity_federation_sso_list"
+    ],
+    "triggerTypes": []
+  },
+  "downloads": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis/releases/download/v0.1.0/workflow-plugin-ory-polis-linux-amd64.tar.gz"
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis/releases/download/v0.1.0/workflow-plugin-ory-polis-linux-arm64.tar.gz"
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis/releases/download/v0.1.0/workflow-plugin-ory-polis-darwin-amd64.tar.gz"
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "url": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis/releases/download/v0.1.0/workflow-plugin-ory-polis-darwin-arm64.tar.gz"
+    }
+  ]
+}
