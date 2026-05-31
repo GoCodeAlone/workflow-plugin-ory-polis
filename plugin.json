@@ -8,6 +8,20 @@
   "tier": "community",
   "private": false,
   "minEngineVersion": "0.64.0",
+  "required_secrets": [
+    {
+      "name": "ORY_POLIS_BASE_URL",
+      "sensitive": false,
+      "description": "Ory Polis API base URL. Referenced as ${ORY_POLIS_BASE_URL}. Keep management calls server-side only.",
+      "prompt": "Ory Polis API URL"
+    },
+    {
+      "name": "ORY_POLIS_API_KEY",
+      "sensitive": true,
+      "description": "Ory Polis API key sent as Authorization: Bearer <token>. Referenced as ${ORY_POLIS_API_KEY}. Leave blank only for private deployments that do not use bearer auth.",
+      "prompt": "Ory Polis API key"
+    }
+  ],
   "keywords": ["ory", "polis", "sso", "saml", "oidc", "scim", "directory-sync"],
   "homepage": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis",
   "repository": "https://github.com/GoCodeAlone/workflow-plugin-ory-polis",
