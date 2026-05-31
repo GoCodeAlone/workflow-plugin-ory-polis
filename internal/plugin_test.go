@@ -5,12 +5,45 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"testing"
 
 	"github.com/GoCodeAlone/workflow-plugin-ory-polis/internal/contracts"
 	pb "github.com/GoCodeAlone/workflow/plugin/external/proto"
 	sdk "github.com/GoCodeAlone/workflow/plugin/external/sdk"
 )
+
+func TestPluginManifestAdvertisesRequiredSecrets(t *testing.T) {
+	raw, err := os.ReadFile("../plugin.json")
+	if err != nil {
+		t.Fatal(err)
+	}
+	var manifest struct {
+		RequiredSecrets []struct {
+			Name      string `json:"name"`
+			Sensitive bool   `json:"sensitive"`
+		} `json:"required_secrets"`
+	}
+	if err := json.Unmarshal(raw, &manifest); err != nil {
+		t.Fatal(err)
+	}
+	secrets := map[string]bool{}
+	for _, secret := range manifest.RequiredSecrets {
+		secrets[secret.Name] = secret.Sensitive
+	}
+	for name, sensitive := range map[string]bool{
+		"ORY_POLIS_BASE_URL": false,
+		"ORY_POLIS_API_KEY":  true,
+	} {
+		got, ok := secrets[name]
+		if !ok {
+			t.Fatalf("plugin.json missing required_secrets entry %s", name)
+		}
+		if got != sensitive {
+			t.Fatalf("%s sensitive = %v, want %v", name, got, sensitive)
+		}
+	}
+}
 
 func TestModuleInitRegistersPolisClient(t *testing.T) {
 	module, err := newOryPolisModule("ory_polis-test", map[string]any{
